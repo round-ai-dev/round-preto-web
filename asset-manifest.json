@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/round-preto-web/static/css/main.08672cf5.css",
+    "main.js": "/round-preto-web/static/js/main.1840f1e8.js",
+    "index.html": "/round-preto-web/index.html",
+    "main.08672cf5.css.map": "/round-preto-web/static/css/main.08672cf5.css.map",
+    "main.1840f1e8.js.map": "/round-preto-web/static/js/main.1840f1e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08672cf5.css",
+    "static/js/main.1840f1e8.js"
+  ]
+}
