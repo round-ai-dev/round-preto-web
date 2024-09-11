@@ -1,0 +1,184 @@
+p {
+    letter-spacing: .1em;
+}
+
+.main {
+    background-color: #F3F3F3;
+}
+
+.main__header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.main__headerContact {
+    border-radius: 50px;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__headerContact > p {
+    font-size: 20px;
+}
+
+.main__starting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 90px;
+}
+
+.main__startingSlogan {
+    font-size: 50px;
+}
+
+.main__startingExplanation {
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.main__waitlistButton {
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.main__waitlistButton > p {
+    font-size: 15px;
+}
+
+.main__waitlistBackground {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.main__waitlistBackground--show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__waitlistBackground--hide {
+    display: none;
+}
+
+.main__features {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.main__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    gap: 20px;
+}
+
+.main__feature > img {
+    width: 75px;
+    height: 75px;
+}
+
+.main__feature > p {
+    text-align: center;
+}
+
+.main__featureTitle {
+    font-size: 20px;
+}
+
+.main__featureDescription {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.main__body1 {
+    height: 400vh;
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.main__body1Text {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    position: sticky;
+    top: 0;
+}
+
+.main__body1TextTitle {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.main__body1TextSteps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main__body1TextStep {
+    font-size: 20px;
+}
+
+.main__body1ContentBox {
+    width: 750px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.main__body1Content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 30px;
+}
+
+.main__body1Content1 {
+    height: 800px;
+}
+
+.main__body1Content2 {
+    height: 740px;
+}
+
+.main__body1Content3 {
+    height: 680px;
+}
+
+.main__body1Content4 {
+    height: 620px;
+}
+
+.main__body1ContentTitle {
+    font-size: 20px;
+}

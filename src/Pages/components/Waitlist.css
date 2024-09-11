@@ -1,0 +1,99 @@
+.waitlist {
+    width: 1000px;
+    height: 800px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.waitlist__main--show, .waitlist__email--show {
+    display: block;
+}
+
+.waitlist__main--hide, .waitlist__email--hide {
+    display: none;
+}
+
+.waitlistMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.waitlistMain__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.waitlistMain__title {
+    font-size: 50px;
+}
+
+.waitlistMain__subtitle {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.waitlistMain__plans {
+    display: flex;
+    gap: 50px;
+}
+
+.waitlistMain__plan {
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid #2F2F2F;
+}
+
+.waitlistMain__planName {
+    font-size: 20px;
+}
+
+.waitlistMain__planPrice {
+    font-size: 50px;
+}
+
+.waitlistMain__properties {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.waitlistMain__property {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.waitlistMain__planButton {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.waitlistMain__planButton > p {
+    font-size: 15px;
+}
+
+.waitlist__exit {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
