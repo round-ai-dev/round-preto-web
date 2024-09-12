@@ -1,14 +1,3 @@
-.waitlist {
-    width: 1000px;
-    height: 800px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
 .waitlist__main--show, .waitlist__email--show {
     display: block;
 }
@@ -18,11 +7,15 @@
 }
 
 .waitlistMain {
+    width: 1000px;
+    height: 800px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 50px;
+    position: relative;
 }
 
 .waitlistMain__header {
@@ -90,6 +83,33 @@
 
 .waitlistMain__planButton > p {
     font-size: 15px;
+}
+
+.waitlistEmail__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.waitlistEmail {
+    width: 1000px;
+    height: 800px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+}
+
+.waitlistEmail__title {
+    font-size: 50px;
+}
+
+.waitlistEmail__subtitle {
+    font-size: 12px;
 }
 
 .waitlist__exit {
