@@ -45,7 +45,7 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                 </div>
             </div>
 
-            <img onClick={() => {setisWaitlist(false); setPopupState(0);}} className='waitlist__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit.svg'}/>
+            <img onClick={() => {setisWaitlist(false); setPopupState(0);}} className='waitlistMain__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit.svg'}/>
         </div>
     )
 }
@@ -53,12 +53,29 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
 function WaitlistEmail({setPopupState}) {
     return (
         <div className='waitlistEmail white_background'>
-            <div className='waitlistEmail__header'>
+            <div className='waitlistEmail__header dark1_background'>
+                <img onClick={() => setPopupState(0)} className='waitlistEmail__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
+            </div>
+
+            <div className='waitlistEmail__starting'>
                 <p className='waitlistEmail__title poppins-semibold'>Leave E-mail</p>
                 <p className='waitlistEmail__subtitle poppins-medium'>Leave your email, and we will update you with exciting news about ROUND.</p>
             </div>
 
-            <img onClick={() => setPopupState(0)} className='waitlist__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit.svg'}/>
+            <div className='waitlistEmail__inputs'>
+                <div className='waitlistEmail__input'>
+                    <p className='waitlistEmail__inputName poppins-medium'>name:</p>
+                    <div className='waitlistEmail__inputHolder dark1_background'><input className='white' type='text'/></div>
+                </div>
+                <div className='waitlistEmail__input'>
+                    <p className='waitlistEmail__inputName poppins-medium'>e-mail:</p>
+                    <div className='waitlistEmail__inputHolder dark1_background'><input className='white' type='text'/></div>
+                </div>
+            </div>
+
+            <div className='waitlistEmail__submitButton dark2_background'>
+                <p className='poppins-medium white'>Submit</p>
+            </div>
         </div>
     )
 }

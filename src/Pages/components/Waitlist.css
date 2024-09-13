@@ -85,16 +85,15 @@
     font-size: 15px;
 }
 
-.waitlistEmail__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.waitlistMain__exit {
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
 
 .waitlistEmail {
-    width: 1000px;
-    height: 800px;
+    width: 400px;
+    height: 500px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -104,16 +103,83 @@
     position: relative;
 }
 
+.waitlistEmail__header {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.waitlistEmail__exit {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.waitlistEmail__starting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: 35px;
+}
+
 .waitlistEmail__title {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .waitlistEmail__subtitle {
     font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    width: 270px;
 }
 
-.waitlist__exit {
-    position: absolute;
-    top: 30px;
-    right: 30px;
+.waitlistEmail__inputName {
+    font-size: 15px;
+}
+
+.waitlistEmail__inputs {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.waitlistEmail__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.waitlistEmail__inputHolder {
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.waitlistEmail__inputHolder > input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+.waitlistEmail__submitButton {
+    width: 320px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.waitlistEmail__submitButton > p {
+    font-size: 20px;
 }
