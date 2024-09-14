@@ -80,8 +80,18 @@ function WaitlistEmail({setPopupState}) {
     )
 }
 
+function WaitlistBook({setPopupState}) {
+    return (
+        <div className='waitlistBook white_background'>
+            <div className='waitlistBook__header dark1_background'>
+                <img onClick={() => setPopupState(0)} className='waitlistEmail__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
+            </div>
+        </div>
+    )
+}
+
 function Waitlist({setisWaitlist}) {
-    const [popupState, setPopupState] = useState(1);
+    const [popupState, setPopupState] = useState(0);
 
     return (
         <div className="waitlist">
@@ -90,7 +100,11 @@ function Waitlist({setisWaitlist}) {
             </div>
 
             <div className={`waitlist__email ${popupState === 1 ? 'waitlist__email--show' : 'waitlist__email--hide'}`}>
-                <WaitlistEmail setisWaitlist={x => setisWaitlist(x)} setPopupState={x => setPopupState(x)} />
+                <WaitlistEmail setPopupState={x => setPopupState(x)} />
+            </div>
+
+            <div className={`waitlist__book ${popupState === 2 ? 'waitlist__book--show' : 'waitlist__book--hide'}`}>
+                <WaitlistBook setPopupState={x => setPopupState(x)} />
             </div>
         </div>
     )

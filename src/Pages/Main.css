@@ -157,26 +157,30 @@ p {
 
 .main__body1Content {
     position: absolute;
-    bottom: 0;
     width: 100%;
-    border-radius: 20px 20px 0 0;
-    padding: 20px 30px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.main__body1Content > video {
+    margin-top: 30px;
+    border-radius: 10px;
 }
 
 .main__body1Content1 {
-    height: 800px;
+    top: 150px;
 }
 
 .main__body1Content2 {
-    height: 740px;
+    top: 230px;
 }
 
 .main__body1Content3 {
-    height: 680px;
+    top: 310px;
 }
 
 .main__body1Content4 {
-    height: 620px;
+    top: 390px;
 }
 
 .main__body1ContentTitle {

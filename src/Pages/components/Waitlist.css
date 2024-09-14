@@ -1,8 +1,8 @@
-.waitlist__main--show, .waitlist__email--show {
+.waitlist__main--show, .waitlist__email--show, .waitlist__book--show {
     display: block;
 }
 
-.waitlist__main--hide, .waitlist__email--hide {
+.waitlist__main--hide, .waitlist__email--hide, .waitlist__book--hide {
     display: none;
 }
 
@@ -182,4 +182,24 @@
 
 .waitlistEmail__submitButton > p {
     font-size: 20px;
+}
+
+.waitlistBook { 
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+}
+
+.waitlistBook__header {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
 }
