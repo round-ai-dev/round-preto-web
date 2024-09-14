@@ -9,15 +9,16 @@ function Main() {
             <div className='main__header white_background'>
                 <img src={process.env.PUBLIC_URL + '/icons/logo.svg'} alt=''/>
                 <div className='main__menus'>
-                    <p className='main__menu poppins-medium'>PRODUCT</p>
-                    <p className='main__menu poppins-medium'>PARTNERS</p>
-                    <div className='main__headerContact blue2_background'>
+                    <a href='#starting'><p className='main__menu poppins-medium'>HOME</p></a>
+                    <a href='#product'><p className='main__menu poppins-medium'>PRODUCT</p></a>
+                    <a href='#partners'><p className='main__menu poppins-medium'>PARTNERS</p></a>
+                    <a href='#contact'><div className='main__headerContact blue2_background'>
                         <p className='main__menu poppins-medium white'>CONTACT</p>
-                    </div>
+                    </div></a>
                 </div>
             </div>
 
-            <div className='main__starting'>
+            <div className='main__starting' id='starting'>
                 <p className='main__startingSlogan suse-bold'>Easy Data Preparation</p>
                 <p className='main__startingExplanation poppins-regular'>Empower your data journey with high flexibility,<br/>easy visualization, and a developer-friendly data preparation tool</p>
                 <div onClick={() => {console.log(isWaitlist); setIsWaitlist(true);}} className='main__waitlistButton blue2_background'>
@@ -48,7 +49,7 @@ function Main() {
                 </div>
             </div>
 
-            <div className='main__body1'>
+            <div className='main__body1' id='product'>
                 <div className='main__body1Text'>
                     <p className='main__body1TextTitle suse-bold'>Amazing User<br/>Experience with<br/>ROUND</p>
                     <div className='main__body1TextSteps'>
@@ -94,7 +95,16 @@ function Main() {
                 </div>
             </div>
 
-            <div className='main__contact dark4_background'>
+            <div className='main__partners' id='partners'>
+                <p className='main__partnersTitle suse-bold'>Our Partners</p>
+                <div className='main__partnerLogos'>
+                    <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/sim2real.svg'}/>
+                    <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/story.png'}/>
+                    <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/vessl.png'}/>
+                </div>
+            </div>
+
+            <div className='main__contact' id='contact'>
                 <div className='main__contactHeader'>
                     <p className='main__contactTitle suse-bold'>Contact Us!</p>
                     <p className='main__contactSubtitle poppins-medium'>Leave a message for more details about ROUND!</p>

@@ -5,12 +5,12 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
     return (
         <div className='waitlistMain white_background'>
             <div className='waitlistMain__header'>
-                <p className='waitlistMain__title poppins-semibold'>Waitlist</p>
+                <p className='waitlistMain__title suse-bold'>Waitlist</p>
                 <p className='waitlistMain__subtitle poppins-medium'>We will be launching our product in January, 2025.<br/>If you are interested, book ROUND or leave your e-mail to follow up with us!</p>
             </div>
             <div className='waitlistMain__plans'>
                 <div className='waitlistMain__plan'>
-                    <p className='waitlistMain__planName poppins-medium dark1'>Leave your e-mail</p>
+                    <p className='waitlistMain__planName suse-medium dark1'>Leave your e-mail</p>
                     <p className='waitlistMain__planPrice poppins-semibold dark1'>$0</p>
                     <div className='waitlistMain__properties'>
                         <div className='waitlistMain__property'>
@@ -23,7 +23,7 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                     </div>
                 </div>
                 <div className='waitlistMain__plan dark1_background'>
-                    <p className='waitlistMain__planName poppins-medium white'>Book ROUND</p>
+                    <p className='waitlistMain__planName suse-medium white'>Book ROUND</p>
                     <p className='waitlistMain__planPrice poppins-semibold white'>$10</p>
                     <div className='waitlistMain__properties'>
                         <div className='waitlistMain__property'>
@@ -58,7 +58,7 @@ function WaitlistEmail({setPopupState}) {
             </div>
 
             <div className='waitlistEmail__starting'>
-                <p className='waitlistEmail__title poppins-semibold'>Leave E-mail</p>
+                <p className='waitlistEmail__title suse-semibold'>Leave E-mail</p>
                 <p className='waitlistEmail__subtitle poppins-medium'>Leave your email, and we will update you with exciting news about ROUND.</p>
             </div>
 

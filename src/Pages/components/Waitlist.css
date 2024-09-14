@@ -26,11 +26,11 @@
 }
 
 .waitlistMain__title {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .waitlistMain__subtitle {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
     text-align: center;
 }
@@ -81,6 +81,10 @@
     border-radius: 10px;
 }
 
+.waitlistMain__planButton:hover {
+    cursor: pointer;
+}
+
 .waitlistMain__planButton > p {
     font-size: 15px;
 }
@@ -89,6 +93,10 @@
     position: absolute;
     top: 30px;
     right: 30px;
+}
+
+.waitlistMain__exit:hover {
+    cursor: pointer;
 }
 
 .waitlistEmail {
@@ -119,6 +127,10 @@
     right: 12px;
 }
 
+.waitlistEmail__exit:hover {
+    cursor: pointer;
+}
+
 .waitlistEmail__starting {
     display: flex;
     flex-direction: column;
@@ -129,7 +141,7 @@
 }
 
 .waitlistEmail__title {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .waitlistEmail__subtitle {
@@ -178,6 +190,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+}
+
+.waitlistEmail__submitButton:hover {
+    cursor: pointer;
 }
 
 .waitlistEmail__submitButton > p {

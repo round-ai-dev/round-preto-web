@@ -20,6 +20,11 @@
     align-items: center;
 }
 
+.main__menus > a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .main__headerContact {
     border-radius: 50px;
     width: 120px;
@@ -37,11 +42,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500px;
     justify-content: center;
     gap: 40px;
-    margin-top: 90px;
-    margin-bottom: 30px;
+    padding-top: 200px;
+    padding-bottom: 100px;
 }
 
 .main__startingSlogan {
@@ -60,6 +64,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 50px;
+}
+
+.main__waitlistButton:hover {
+    cursor: pointer;
 }
 
 .main__waitlistButton > p {
@@ -191,9 +199,31 @@
     font-size: 20px;
 }
 
+.main__partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.main__partnersTitle {
+    font-size: 60px;
+}
+
+.main__partnerLogos {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.main__partnerLogo {
+    height: 40px;
+}
+
 .main__contact {
-    margin-top: 100px;
-    padding: 100px 0;
+    padding-top: 200px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -234,8 +264,9 @@
 }
 
 .main__footer {
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 200px;
 }
