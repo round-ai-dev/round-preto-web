@@ -8,8 +8,12 @@ function Main() {
         <div className='main'>
             <div className='main__header white_background'>
                 <img src={process.env.PUBLIC_URL + '/icons/logo.svg'} alt=''/>
-                <div className='main__headerContact blue2_background'>
-                    <p className='poppins-medium white'>Contact</p>
+                <div className='main__menus'>
+                    <p className='main__menu poppins-medium'>PRODUCT</p>
+
+                    <div className='main__headerContact blue2_background'>
+                        <p className='main__menu poppins-medium white'>CONTACT</p>
+                    </div>
                 </div>
             </div>
 
@@ -88,6 +92,24 @@ function Main() {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='main__contact dark4_background'>
+                <div className='main__contactHeader'>
+                    <p className='main__contactTitle poppins-semibold'>Contact Us!</p>
+                    <p className='main__contactSubtitle poppins-medium'>Leave a message for more details about ROUND!</p>
+                </div>
+                <form className='main__contactInputs'>
+                    <input className='poppins-medium dark1_background' type='text' placeholder='Name'/>
+                    <input className='poppins-medium dark1_background' type='text' placeholder='Company / Position'/>
+                    <input className='poppins-medium dark1_background' type='text' placeholder='Email Address'/>
+                    <input className='poppins-medium dark1_background' type='text' placeholder='Message'/>
+                    <input className='poppins-medium blue2_background white' type='submit'/>
+                </form>
+            </div>
+
+            <div className='main__footer blue3_background'>
+                <p className='poppins-medium blue1'>Spend time in valuable research. We will do the annoying part</p>
             </div>
         </div>
     )

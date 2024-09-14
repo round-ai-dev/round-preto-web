@@ -1,7 +1,3 @@
-p {
-    letter-spacing: .1em;
-}
-
 .main {
     background-color: #F3F3F3;
 }
@@ -17,6 +13,13 @@ p {
     z-index: 1;
 }
 
+.main__menus {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+}
+
 .main__headerContact {
     border-radius: 50px;
     width: 120px;
@@ -26,8 +29,8 @@ p {
     justify-content: center;
 }
 
-.main__headerContact > p {
-    font-size: 20px;
+.main__menu {
+    font-size: 15px;
 }
 
 .main__starting {
@@ -121,6 +124,7 @@ p {
     display: flex;
     justify-content: center;
     gap: 100px;
+    margin-top: 100px;
 }
 
 .main__body1Text {
@@ -185,4 +189,49 @@ p {
 
 .main__body1ContentTitle {
     font-size: 20px;
+}
+
+.main__contact {
+    margin-top: 100px;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.main__contactHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__contactTitle {
+    font-size: 50px;
+}
+
+.main__contactSubtitle {
+    font-size: 15px;
+}
+
+.main__contactInputs {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 30px;
+}
+
+.main__contactInputs > input {
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.main__footer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
