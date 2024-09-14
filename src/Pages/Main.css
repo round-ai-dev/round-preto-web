@@ -41,10 +41,11 @@
     justify-content: center;
     gap: 40px;
     margin-top: 90px;
+    margin-bottom: 30px;
 }
 
 .main__startingSlogan {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .main__startingExplanation {
@@ -54,8 +55,7 @@
 }
 
 .main__waitlistButton {
-    width: 160px;
-    height: 50px;
+    padding: 20px 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +63,7 @@
 }
 
 .main__waitlistButton > p {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .main__waitlistBackground {
@@ -110,11 +110,11 @@
 }
 
 .main__featureTitle {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .main__featureDescription {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .main__body1TextTitle {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 60px;
 }
 
@@ -208,7 +208,7 @@
 }
 
 .main__contactTitle {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .main__contactSubtitle {
@@ -222,11 +222,15 @@
     gap: 30px;
 }
 
-.main__contactInputs > input {
+.main__contactInputs > input, .main__contactInputs > textarea {
     border: none;
     outline: none;
     padding: 15px;
     border-radius: 10px;
+}
+
+.main__contactInputs > textarea {
+    height: 100px;
 }
 
 .main__footer {

@@ -10,7 +10,7 @@ function Main() {
                 <img src={process.env.PUBLIC_URL + '/icons/logo.svg'} alt=''/>
                 <div className='main__menus'>
                     <p className='main__menu poppins-medium'>PRODUCT</p>
-
+                    <p className='main__menu poppins-medium'>PARTNERS</p>
                     <div className='main__headerContact blue2_background'>
                         <p className='main__menu poppins-medium white'>CONTACT</p>
                     </div>
@@ -18,7 +18,7 @@ function Main() {
             </div>
 
             <div className='main__starting'>
-                <p className='main__startingSlogan poppins-semibold'>Easy Data Preparation</p>
+                <p className='main__startingSlogan suse-bold'>Easy Data Preparation</p>
                 <p className='main__startingExplanation poppins-regular'>Empower your data journey with high flexibility,<br/>easy visualization, and a developer-friendly data preparation tool</p>
                 <div onClick={() => {console.log(isWaitlist); setIsWaitlist(true);}} className='main__waitlistButton blue2_background'>
                     <p className='poppins-medium white'>Join Waitlist</p>
@@ -33,24 +33,24 @@ function Main() {
             <div className='main__features'>
                 <div className='main__feature'>
                     <img src={process.env.PUBLIC_URL + '/icons/flexibility.svg'} alt=''/>
-                    <p className='main__featureTitle poppins-semibold'>High Flexibility</p>
+                    <p className='main__featureTitle suse-bold'>High Flexibility</p>
                     <p className='main__featureDescription poppins-medium'>Edit process however you like<br/>whenever you want!</p>
                 </div>
                 <div className='main__feature'>
                     <img src={process.env.PUBLIC_URL + '/icons/adaptation.svg'} alt=''/>
-                    <p className='main__featureTitle poppins-semibold'>Auto-Adaptation</p>
+                    <p className='main__featureTitle suse-bold'>Auto-Adaptation</p>
                     <p className='main__featureDescription poppins-medium'>Import other's module<br/>without specific changes!</p>
                 </div>
                 <div className='main__feature'>
                     <img src={process.env.PUBLIC_URL + '/icons/visualization.svg'} alt=''/>
-                    <p className='main__featureTitle poppins-semibold'>Easy Visualization</p>
+                    <p className='main__featureTitle suse-bold'>Easy Visualization</p>
                     <p className='main__featureDescription poppins-medium'>Monitor the whole process.<br/>Manage flow easier!</p>
                 </div>
             </div>
 
             <div className='main__body1'>
                 <div className='main__body1Text'>
-                    <p className='main__body1TextTitle poppins-semibold'>Amazing User<br/>Experience with<br/>ROUND</p>
+                    <p className='main__body1TextTitle suse-bold'>Amazing User<br/>Experience with<br/>ROUND</p>
                     <div className='main__body1TextSteps'>
                         <p className='main__body1TextStep poppins-medium'><span className='blue1'>Step 1.</span> Forking</p>
                         <p className='main__body1TextStep poppins-medium'><span className='blue1'>Step 2.</span> Customizing</p>
@@ -61,7 +61,7 @@ function Main() {
                 <div className='main__body1ContentBoxes'>
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content1 dark1_background'>
-                            <p className='main__body1ContentTitle poppins-medium'><span className='blue2'>01</span> <span className='white'>Forking</span></p>
+                            <p className='main__body1ContentTitle suse-medium'><span className='blue2'>01</span> <span className='white'>Forking</span></p>
                             <video width='100%' autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/steps/forking.mp4'} type='video/mp4'/>
                             </video>
@@ -69,7 +69,7 @@ function Main() {
                     </div>
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content2 dark2_background'>
-                            <p className='main__body1ContentTitle poppins-medium'><span className='blue2'>02</span> <span className='white'>Customizing</span></p>
+                            <p className='main__body1ContentTitle suse-medium'><span className='blue2'>02</span> <span className='white'>Customizing</span></p>
                             <video width='100%' autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/steps/customizing.mp4'} type='video/mp4'/>
                             </video>
@@ -77,7 +77,7 @@ function Main() {
                     </div>
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content3 dark3_background'>
-                            <p className='main__body1ContentTitle poppins-medium'><span className='blue2'>03</span> <span className='white'>Debugging</span></p>
+                            <p className='main__body1ContentTitle suse-medium'><span className='blue2'>03</span> <span className='white'>Debugging</span></p>
                             <video width='100%' autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/steps/debugging.mp4'} type='video/mp4'/>
                             </video>
@@ -85,7 +85,7 @@ function Main() {
                     </div>
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content4 dark4_background'>
-                            <p className='main__body1ContentTitle poppins-medium'><span className='blue2'>04</span> <span className='white'>Uploading</span></p>
+                            <p className='main__body1ContentTitle suse-medium'><span className='blue2'>04</span> <span className='white'>Uploading</span></p>
                             <video width='100%' autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/steps/uploading.mp4'} type='video/mp4'/>
                             </video>
@@ -96,14 +96,14 @@ function Main() {
 
             <div className='main__contact dark4_background'>
                 <div className='main__contactHeader'>
-                    <p className='main__contactTitle poppins-semibold'>Contact Us!</p>
+                    <p className='main__contactTitle suse-bold'>Contact Us!</p>
                     <p className='main__contactSubtitle poppins-medium'>Leave a message for more details about ROUND!</p>
                 </div>
                 <form className='main__contactInputs'>
-                    <input className='poppins-medium dark1_background' type='text' placeholder='Name'/>
-                    <input className='poppins-medium dark1_background' type='text' placeholder='Company / Position'/>
-                    <input className='poppins-medium dark1_background' type='text' placeholder='Email Address'/>
-                    <input className='poppins-medium dark1_background' type='text' placeholder='Message'/>
+                    <input className='poppins-medium dark1_background white' type='text' placeholder='Name'/>
+                    <input className='poppins-medium dark1_background white' type='text' placeholder='Company / Position'/>
+                    <input className='poppins-medium dark1_background white' type='text' placeholder='Email Address'/>
+                    <textarea className='main__contactMessage poppins-medium dark1_background white' type='textarea' placeholder='Message'/>
                     <input className='poppins-medium blue2_background white' type='submit'/>
                 </form>
             </div>
