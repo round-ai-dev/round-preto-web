@@ -7,7 +7,7 @@ function Main() {
     return (
         <div className='main'>
             <div className='main__header white_background'>
-                <img src={process.env.PUBLIC_URL + '/icons/logo.svg'} alt=''/>
+                <img src={process.env.PUBLIC_URL + '/logo/logo.svg'} alt=''/>
                 <div className='main__menus'>
                     <a href='#starting'><p className='main__menu poppins-medium'>HOME</p></a>
                     <a href='#product'><p className='main__menu poppins-medium'>PRODUCT</p></a>
