@@ -49,7 +49,17 @@ function Main() {
                 </div>
             </div>
 
-            <div className='main__body1' id='product'>
+            <div className='main__visualization main__body'>
+                <div className='main__visualizationTitles'>
+                    <p className='main__visualizationsubTitle poppins-medium'>Monitor data changes throughout your pipeline</p>
+                    <p className='main__visualizationTitle suse-bold'>Easily Visualize your Data Process</p>
+                </div>
+                <video className='main__visualizationVideo' autoPlay={true} loop muted>
+                    <source src={process.env.PUBLIC_URL + '/videos/visualization.mp4'} type='video/mp4'/>
+                </video>
+            </div>
+
+            <div className='main__body1 main__body' id='product'>
                 <div className='main__body1Text'>
                     <p className='main__body1TextTitle suse-bold'>Amazing User<br/>Experience with<br/>ROUND</p>
                     <div className='main__body1TextSteps'>
@@ -64,7 +74,7 @@ function Main() {
                         <div className='main__body1Content main__body1Content1 dark1_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>01</span> <span className='white'>Forking</span></p>
                             <video width='100%' autoPlay={true} loop muted>
-                                <source src={process.env.PUBLIC_URL + '/steps/forking.mp4'} type='video/mp4'/>
+                                <source src={process.env.PUBLIC_URL + '/videos/forking.mp4'} type='video/mp4'/>
                             </video>
                         </div>
                     </div>
@@ -72,7 +82,7 @@ function Main() {
                         <div className='main__body1Content main__body1Content2 dark2_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>02</span> <span className='white'>Customizing</span></p>
                             <video width='100%' autoPlay={true} loop muted>
-                                <source src={process.env.PUBLIC_URL + '/steps/customizing.mp4'} type='video/mp4'/>
+                                <source src={process.env.PUBLIC_URL + '/videos/customizing.mp4'} type='video/mp4'/>
                             </video>
                         </div>
                     </div>
@@ -80,7 +90,7 @@ function Main() {
                         <div className='main__body1Content main__body1Content3 dark3_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>03</span> <span className='white'>Debugging</span></p>
                             <video width='100%' autoPlay={true} loop muted>
-                                <source src={process.env.PUBLIC_URL + '/steps/debugging.mp4'} type='video/mp4'/>
+                                <source src={process.env.PUBLIC_URL + '/videos/debugging.mp4'} type='video/mp4'/>
                             </video>
                         </div>
                     </div>
@@ -88,7 +98,7 @@ function Main() {
                         <div className='main__body1Content main__body1Content4 dark4_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>04</span> <span className='white'>Uploading</span></p>
                             <video width='100%' autoPlay={true} loop muted>
-                                <source src={process.env.PUBLIC_URL + '/steps/uploading.mp4'} type='video/mp4'/>
+                                <source src={process.env.PUBLIC_URL + '/videos/uploading.mp4'} type='video/mp4'/>
                             </video>
                         </div>
                     </div>
@@ -107,14 +117,14 @@ function Main() {
             <div className='main__contact' id='contact'>
                 <div className='main__contactHeader'>
                     <p className='main__contactTitle suse-bold'>Contact Us!</p>
-                    <p className='main__contactSubtitle poppins-medium'>Leave a message for more details about ROUND!</p>
+                    <p className='main__contactSubtitle poppins-medium'>Leave a message for more details and pricing about ROUND!</p>
                 </div>
                 <form className='main__contactInputs'>
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Name'/>
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Company / Position'/>
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Email Address'/>
                     <textarea className='main__contactMessage poppins-medium dark1_background white' type='textarea' placeholder='Message'/>
-                    <input className='poppins-medium blue2_background white' type='submit'/>
+                    <input className='main__contactSubmit poppins-medium blue2_background white' type='submit' value='SUBMIT'/>
                 </form>
             </div>
 
