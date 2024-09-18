@@ -43,6 +43,27 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                         <p className='dark1 poppins-semibold'>Start Booking</p>
                     </div>
                 </div>
+                <div className='waitlistMain__plan waitlistMain__plan--betatest blue2_background'>
+                    <p className='waitlistMain__planName suse-medium white'>Sign Up for Betatest</p>
+                    <p className='waitlistMain__planPrice poppins-semibold white'>$0</p>
+                    <div className='waitlistMain__properties'>
+                        <div className='waitlistMain__property'>
+                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
+                            <p className='poppins-medium white'>Try out beta version</p>
+                        </div>
+                        <div className='waitlistMain__property'>
+                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
+                            <p className='poppins-medium white'>Get betatesting notifications</p>
+                        </div>
+                        <div className='waitlistMain__property'>
+                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
+                            <p className='poppins-medium white'>Get followup news</p>
+                        </div>
+                    </div>
+                    <div onClick={() => setPopupState(3)} className='waitlistMain__planButton white_background'>
+                        <p className='blue2 poppins-semibold'>Sign Up Betatest</p>
+                    </div>
+                </div>
             </div>
 
             <img onClick={() => {setisWaitlist(false); setPopupState(0);}} className='waitlistMain__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit.svg'}/>
@@ -84,7 +105,37 @@ function WaitlistBook({setPopupState}) {
     return (
         <div className='waitlistBook white_background'>
             <div className='waitlistBook__header dark1_background'>
-                <img onClick={() => setPopupState(0)} className='waitlistEmail__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
+                <img onClick={() => setPopupState(0)} className='waitlistBook__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
+            </div>
+        </div>
+    )
+}
+
+function WaitlistBetatest({setPopupState}) {
+    return (
+        <div className='waitlistBetatest white_background'>
+            <div className='waitlistBetatest__header dark1_background'>
+                <img onClick={() => setPopupState(0)} className='waitlistBetatest__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
+            </div>
+
+            <div className='waitlistBetatest__starting'>
+                <p className='waitlistBetatest__title suse-semibold'>Leave E-mail</p>
+                <p className='waitlistBetatest__subtitle poppins-medium'>We will send you our beta version.</p>
+            </div>
+
+            <div className='waitlistBetatest__inputs'>
+                <div className='waitlistBetatest__input'>
+                    <p className='waitlistBetatest__inputName poppins-medium'>name:</p>
+                    <div className='waitlistBetatest__inputHolder dark1_background'><input className='white' type='text'/></div>
+                </div>
+                <div className='waitlistBetatest__input'>
+                    <p className='waitlistBetatest__inputName poppins-medium'>e-mail:</p>
+                    <div className='waitlistBetatest__inputHolder dark1_background'><input className='white' type='text'/></div>
+                </div>
+            </div>
+
+            <div className='waitlistBetatest__submitButton dark2_background'>
+                <p className='poppins-medium white'>Submit</p>
             </div>
         </div>
     )
@@ -105,6 +156,10 @@ function Waitlist({setisWaitlist}) {
 
             <div className={`waitlist__book ${popupState === 2 ? 'waitlist__book--show' : 'waitlist__book--hide'}`}>
                 <WaitlistBook setPopupState={x => setPopupState(x)} />
+            </div>
+
+            <div className={`waitlist__betatest ${popupState === 3 ? 'waitlist__betatest--show' : 'waitlist__betatest--hide'}`}>
+                <WaitlistBetatest setPopupState={x => setPopupState(x)} />
             </div>
         </div>
     )
