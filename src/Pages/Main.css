@@ -5,6 +5,23 @@
     align-items: center;
 }
 
+.main__button {
+    transition: all 0.5s;
+}
+
+.main__button:hover {
+    background-color: #BAD0E9;
+    color: #2A64A9;
+}
+
+.main__button > p {
+    transition: all 0.5s;
+}
+
+.main__button:hover > p {
+    color: #2A64A9;
+}
+
 .main__header {
     position: fixed;
     top: 0;
@@ -12,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
     z-index: 1;
 }
 
@@ -24,7 +41,13 @@
 .main__menus {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 20px;
+    align-items: center;
+}
+
+.main__menus > a {
+    padding: 10px;
+    display: flex;
     align-items: center;
 }
 
@@ -40,10 +63,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .main__menu {
     font-size: 15px;
+    transition: all 0.5s;
+}
+
+.main__menus > a:hover > p {
+    color: #6391C7;
 }
 
 .main__starting {

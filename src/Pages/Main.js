@@ -13,7 +13,7 @@ function Main() {
                     <a href='#features'><p className='main__menu poppins-medium'>FEATURES</p></a>
                     <a href='#product'><p className='main__menu poppins-medium'>PRODUCT</p></a>
                     <a href='#partners'><p className='main__menu poppins-medium'>PARTNERS</p></a>
-                    <a href='#contact'><div className='main__headerContact blue2_background'>
+                    <a href='#contact'><div className='main__headerContact main__button blue2_background'>
                         <p className='main__menu poppins-medium white'>CONTACT</p>
                     </div></a>
                 </div>
@@ -22,7 +22,7 @@ function Main() {
             <div className='main__starting' id='starting'>
                 <p className='main__startingSlogan suse-bold'>Visualize Your Data Workflows</p>
                 <p className='main__startingExplanation poppins-regular'>Reinvent your data journey with high flexibility,<br/>easy visualization, and a developer-friendly data preparation tool</p>
-                <div onClick={() => {console.log(isWaitlist); setIsWaitlist(true);}} className='main__waitlistButton blue2_background'>
+                <div onClick={() => {console.log(isWaitlist); setIsWaitlist(true);}} className='main__waitlistButton main__button blue2_background'>
                     <p className='poppins-medium white'>Join Waitlist</p>
                 </div>
             </div>
@@ -139,7 +139,7 @@ function Main() {
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Company / Position'/>
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Email Address'/>
                     <textarea className='main__contactMessage poppins-medium dark1_background white' type='textarea' placeholder='Message'/>
-                    <input className='main__contactSubmit poppins-medium blue2_background white' type='submit' value='SUBMIT'/>
+                    <input className='main__contactSubmit main__button poppins-medium blue2_background white' type='submit' value='SUBMIT'/>
                 </form>
             </div>
 
