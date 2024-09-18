@@ -16,6 +16,11 @@
     z-index: 1;
 }
 
+.main__logoLink {
+    display: flex;
+    align-items: center;
+}
+
 .main__menus {
     display: flex;
     justify-content: space-between;
@@ -129,11 +134,21 @@
     line-height: 20px;
 }
 
+.main__featuresContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    padding: 100px;
+    border-radius: 20px;
+}
+
 .main__visualization {
     display: flex;
     justify-content: space-between;
     width: 1200px;
-    padding-top: 200px;
 }
 
 .main__visualizationTitles {
@@ -141,7 +156,7 @@
     flex-direction: column;
     justify-content: center;
     width: 500px;
-    gap: 20px;
+    gap: 10px;
 }
 
 .main__visualizationsubTitle {
@@ -155,6 +170,36 @@
 .main__visualizationVideo {
     border-radius: 20px;
     width: 600px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.main__multienv {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.main__multienvTitles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    gap: 10px;
+}
+
+.main__multienvsubTitle {
+    font-size: 20px;
+    text-align: end;
+}
+
+.main__multienvTitle {
+    font-size: 50px;
+    text-align: end;
+}
+
+.main__multienvVideo {
+    border-radius: 20px;
+    width: 500px;
     box-shadow: 5px 5px 5px grey;
 }
 
@@ -231,13 +276,22 @@
     font-size: 20px;
 }
 
+.main__partnersContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    padding: 100px;
+    border-radius: 20px;
+}
+
 .main__partners {
+    width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    padding-top: 200px;
-    padding-bottom: 100px;
 }
 
 .main__partnersTitle {
