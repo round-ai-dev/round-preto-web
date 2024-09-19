@@ -56,13 +56,13 @@ function Main() {
                         <p className='main__visualizationsubTitle poppins-medium'>Monitor data changes throughout your pipeline</p>
                         <p className='main__visualizationTitle suse-bold'>Easily Visualize your Data Process</p>
                     </div>
-                    <video className='main__visualizationVideo' autoPlay={true} loop muted>
+                    <video className='main__visualizationVideo' playsInline autoPlay={true} loop muted>
                         <source src={process.env.PUBLIC_URL + '/videos/visualization.mp4'} type='video/mp4'/>
                     </video>
                 </div>
 
                 <div className='main__multienv'>
-                    <video className='main__multienvVideo' autoPlay={true} loop muted>
+                    <video className='main__multienvVideo' playsInline autoPlay={true} loop muted>
                         <source src={process.env.PUBLIC_URL + '/videos/multienv.mp4'} type='video/mp4'/>
                     </video>
                     <div className='main__multienvTitles'>
@@ -86,7 +86,7 @@ function Main() {
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content1 dark1_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>01</span> <span className='white'>Forking</span></p>
-                            <video width='100%' autoPlay={true} loop muted>
+                            <video width='100%' playsInline autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/videos/forking.mp4'} type='video/mp4'/>
                             </video>
                         </div>
@@ -94,7 +94,7 @@ function Main() {
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content2 dark2_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>02</span> <span className='white'>Customizing</span></p>
-                            <video width='100%' autoPlay={true} loop muted>
+                            <video width='100%' playsInline autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/videos/customizing.mp4'} type='video/mp4'/>
                             </video>
                         </div>
@@ -102,7 +102,7 @@ function Main() {
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content3 dark3_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>03</span> <span className='white'>Debugging</span></p>
-                            <video width='100%' autoPlay={true} loop muted>
+                            <video width='100%' playsInline autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/videos/debugging.mp4'} type='video/mp4'/>
                             </video>
                         </div>
@@ -110,7 +110,7 @@ function Main() {
                     <div className='main__body1ContentBox'>
                         <div className='main__body1Content main__body1Content4 dark4_background'>
                             <p className='main__body1ContentTitle suse-medium'><span className='blue2'>04</span> <span className='white'>Uploading</span></p>
-                            <video width='100%' autoPlay={true} loop muted>
+                            <video width='100%' playsInline autoPlay={true} loop muted>
                                 <source src={process.env.PUBLIC_URL + '/videos/uploading.mp4'} type='video/mp4'/>
                             </video>
                         </div>
