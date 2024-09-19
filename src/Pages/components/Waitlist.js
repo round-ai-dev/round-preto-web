@@ -17,6 +17,14 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_dark.svg'}/>
                             <p className='poppins-medium dark1'>Get followup news</p>
                         </div>
+                        <div className='waitlistMain__property'>
+                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_dark.svg'}/>
+                            <p className='poppins-medium dark1'>Try out beta version</p>
+                        </div>
+                        <div className='waitlistMain__property'>
+                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_dark.svg'}/>
+                            <p className='poppins-medium dark1'>Get betatesting notifications</p>
+                        </div>
                     </div>
                     <div onClick={() => setPopupState(1)} className='waitlistMain__planButton dark1_background'>
                         <p className='white poppins-semibold'>Leave e-mail</p>
@@ -41,27 +49,6 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                     </div>
                     <div onClick={() => setPopupState(2)} className='waitlistMain__planButton white_background'>
                         <p className='dark1 poppins-semibold'>Start Booking</p>
-                    </div>
-                </div>
-                <div className='waitlistMain__plan waitlistMain__plan--betatest blue2_background'>
-                    <p className='waitlistMain__planName suse-medium white'>Sign Up for Betatest</p>
-                    <p className='waitlistMain__planPrice poppins-semibold white'>$0</p>
-                    <div className='waitlistMain__properties'>
-                        <div className='waitlistMain__property'>
-                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
-                            <p className='poppins-medium white'>Try out beta version</p>
-                        </div>
-                        <div className='waitlistMain__property'>
-                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
-                            <p className='poppins-medium white'>Get betatesting notifications</p>
-                        </div>
-                        <div className='waitlistMain__property'>
-                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
-                            <p className='poppins-medium white'>Get followup news</p>
-                        </div>
-                    </div>
-                    <div onClick={() => setPopupState(3)} className='waitlistMain__planButton white_background'>
-                        <p className='blue2 poppins-semibold'>Sign Up Betatest</p>
                     </div>
                 </div>
             </div>
