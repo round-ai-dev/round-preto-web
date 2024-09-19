@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/round-preto-web/static/css/main.acf3e589.css",
-    "main.js": "/round-preto-web/static/js/main.92ed41c9.js",
+    "main.css": "/round-preto-web/static/css/main.c0c0da1f.css",
+    "main.js": "/round-preto-web/static/js/main.70376ffe.js",
     "index.html": "/round-preto-web/index.html",
-    "main.acf3e589.css.map": "/round-preto-web/static/css/main.acf3e589.css.map",
-    "main.92ed41c9.js.map": "/round-preto-web/static/js/main.92ed41c9.js.map"
+    "main.c0c0da1f.css.map": "/round-preto-web/static/css/main.c0c0da1f.css.map",
+    "main.70376ffe.js.map": "/round-preto-web/static/js/main.70376ffe.js.map"
   },
   "entrypoints": [
-    "static/css/main.acf3e589.css",
-    "static/js/main.92ed41c9.js"
+    "static/css/main.c0c0da1f.css",
+    "static/js/main.70376ffe.js"
   ]
 }
