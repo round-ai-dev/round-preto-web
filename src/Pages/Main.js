@@ -3,7 +3,28 @@ import './Main.css'
 import Waitlist from './components/Waitlist';
 
 function Main() {
-    const [isWaitlist, setIsWaitlist] = useState(false)
+    const [isWaitlist, setIsWaitlist] = useState(false);
+    const [contactName, setContactName] = useState("");
+    const [contactCompany, setContactCompany] = useState("");
+    const [contactEmail, setContactEmail] = useState("");
+    const [contactMessage, setContactMessage] = useState("");
+
+    const onChangeContactName = (e) => {
+        setContactName(e.target.value);
+    }
+    const onChangeContactCompany = (e) => {
+        setContactCompany(e.target.value);
+    }
+    const onChangeContactEmail = (e) => {
+        setContactEmail(e.target.value);
+    }
+    const onChangeContactMessage = (e) => {
+        setContactMessage(e.target.value);
+    }
+    const onSubmitContactForm = () => {
+        
+    }
+
     return (
         <div className='main'>
             <div className='main__header white_background'>
@@ -134,11 +155,11 @@ function Main() {
                     <p className='main__contactTitle suse-bold'>Contact Us!</p>
                     <p className='main__contactSubtitle poppins-medium'>Leave a message for more details and pricing about ROUND!</p>
                 </div>
-                <form className='main__contactInputs'>
-                    <input className='poppins-medium dark1_background white' type='text' placeholder='Name'/>
-                    <input className='poppins-medium dark1_background white' type='text' placeholder='Company / Position'/>
-                    <input className='poppins-medium dark1_background white' type='text' placeholder='Email Address'/>
-                    <textarea className='main__contactMessage poppins-medium dark1_background white' type='textarea' placeholder='Message'/>
+                <form className='main__contactInputs' onSubmit={onSubmitContactForm}>
+                    <input className='poppins-medium dark1_background white' type='text' placeholder='Name' value={contactName} onChange={onChangeContactName}/>
+                    <input className='poppins-medium dark1_background white' type='text' placeholder='Company / Position' value={contactCompany} onChange={onChangeContactCompany}/>
+                    <input className='poppins-medium dark1_background white' type='text' placeholder='Email Address' value={contactEmail} onChange={onChangeContactEmail}/>
+                    <textarea className='main__contactMessage poppins-medium dark1_background white' type='textarea' placeholder='Message' value={contactMessage} onChange={onChangeContactMessage}/>
                     <input className='main__contactSubmit main__button poppins-medium blue2_background white' type='submit' value='SUBMIT'/>
                 </form>
             </div>
