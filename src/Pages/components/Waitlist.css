@@ -7,7 +7,8 @@
 }
 
 .waitlistMain {
-    width: 1200px;
+    width: 90vw;
+    max-width: 1200px;
     height: 800px;
     border-radius: 20px;
     display: flex;
@@ -16,6 +17,7 @@
     justify-content: center;
     gap: 50px;
     position: relative;
+    padding: 20px;
 }
 
 .waitlistMain__header {
@@ -36,8 +38,10 @@
 }
 
 .waitlistMain__plans {
+    width: 100%;
+    max-width: 1000px;
     display: flex;
-    gap: 40px;
+    justify-content: space-around;
 }
 
 .waitlistMain__plan {
