@@ -72,6 +72,19 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
 }
 
 function WaitlistEmail({setPopupState}) {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+
+    const onChangeName = (e) => {
+        setName(e.target.value);
+    }
+    const onChangeEmail = (e) => {
+        setEmail(e.target.value);
+    }
+    const onSubmitForm = () => {
+
+    }
+
     return (
         <div className='waitlistEmail white_background'>
             <div className='waitlistEmail__header dark1_background'>
@@ -86,15 +99,15 @@ function WaitlistEmail({setPopupState}) {
             <div className='waitlistEmail__inputs'>
                 <div className='waitlistEmail__input'>
                     <p className='waitlistEmail__inputName poppins-medium'>name:</p>
-                    <div className='waitlistEmail__inputHolder dark1_background'><input className='white' type='text'/></div>
+                    <div className='waitlistEmail__inputHolder dark1_background'><input className='white' type='text' onChange={onChangeName} value={name}/></div>
                 </div>
                 <div className='waitlistEmail__input'>
                     <p className='waitlistEmail__inputName poppins-medium'>e-mail:</p>
-                    <div className='waitlistEmail__inputHolder dark1_background'><input className='white' type='text'/></div>
+                    <div className='waitlistEmail__inputHolder dark1_background'><input className='white' type='text' onChange={onChangeEmail} value={email}/></div>
                 </div>
             </div>
 
-            <div className='waitlistEmail__submitButton dark2_background'>
+            <div className='waitlistEmail__submitButton dark2_background' onClick={onSubmitForm}>
                 <p className='poppins-medium white'>Submit</p>
             </div>
         </div>
