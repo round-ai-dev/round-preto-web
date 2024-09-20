@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Waitlist.css'
+import { loadPaymentWidget, PaymentWidgetInstance } from "@tosspayments/payment-widget-sdk"
 
 function WaitlistMain({setisWaitlist, setPopupState}) {
     return (
@@ -102,11 +103,27 @@ function WaitlistEmail({setPopupState}) {
 }
 
 function WaitlistBook({setPopupState}) {
+    // const paymentWidgetRef = useRef<PaymentWidgetInstance | null>(null)
+    const price = 50000
+    const clientKey = "test_ck_AQ92ymxN34Pme1q9EjZv3ajRKXvd"
+    const customerKey = "YbX2HuSlsC9uVJW6NMRMj"
+
+    useEffect(() => {
+        (async () => {
+            const paymentWidget = await loadPaymentWidget(clientKey, customerKey)
+        
+            paymentWidget.renderPaymentMethods("#payment-widget", price)
+        
+            // paymentWidgetRef.current = paymentWidget
+        })()
+    }, [])
+
     return (
         <div className='waitlistBook white_background'>
             <div className='waitlistBook__header dark1_background'>
                 <img onClick={() => setPopupState(0)} className='waitlistBook__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
             </div>
+            <div id="payment-widget"/>
         </div>
     )
 }

@@ -43,7 +43,7 @@ function Main() {
             <div className='main__starting' id='starting'>
                 <p className='main__startingSlogan suse-bold'>Visualize Your Data Workflows</p>
                 <p className='main__startingExplanation poppins-regular'>Reinvent your data journey with high flexibility,<br/>easy visualization, and a developer-friendly data preparation tool</p>
-                <div onClick={() => {console.log(isWaitlist); setIsWaitlist(true);}} className='main__waitlistButton main__button blue2_background'>
+                <div onClick={() => setIsWaitlist(true)} className='main__waitlistButton main__button blue2_background'>
                     <p className='poppins-medium white'>Join Waitlist</p>
                 </div>
             </div>
