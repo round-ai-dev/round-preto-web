@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import './Waitlist.css'
+import './Waitlist.css';
 import { loadPaymentWidget, PaymentWidgetInstance } from "@tosspayments/payment-widget-sdk"
 
 function WaitlistMain({setisWaitlist, setPopupState}) {
@@ -69,8 +69,31 @@ function WaitlistEmail({setPopupState}) {
     const onChangeEmail = (e) => {
         setEmail(e.target.value);
     }
-    const onSubmitForm = () => {
+    const onSubmitForm = async() => {
+        try {
+            const response = await fetch("https://100.25.46.65:8010/waitlist", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                })
+            })
 
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data)
+
+            setName("");
+            setEmail("");
+        } catch (error) {
+            console.error("Error posting waitlist email:", error)
+        }
     }
 
     return (
@@ -103,18 +126,16 @@ function WaitlistEmail({setPopupState}) {
 }
 
 function WaitlistBook({setPopupState}) {
-    // const paymentWidgetRef = useRef<PaymentWidgetInstance | null>(null)
-    const price = 50000
-    const clientKey = "test_ck_AQ92ymxN34Pme1q9EjZv3ajRKXvd"
-    const customerKey = "YbX2HuSlsC9uVJW6NMRMj"
-
+    const clientKey = "test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm"
+    const customerKey = "L09yE0ynyzyo-Kv3ILcKc"
+    const price = 50000;
+    
     useEffect(() => {
         (async () => {
             const paymentWidget = await loadPaymentWidget(clientKey, customerKey)
         
             paymentWidget.renderPaymentMethods("#payment-widget", price)
         
-            // paymentWidgetRef.current = paymentWidget
         })()
     }, [])
 
@@ -123,7 +144,7 @@ function WaitlistBook({setPopupState}) {
             <div className='waitlistBook__header dark1_background'>
                 <img onClick={() => setPopupState(0)} className='waitlistBook__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
             </div>
-            <div id="payment-widget"/>
+            <div id="payment-widget" />
         </div>
     )
 }

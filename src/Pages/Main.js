@@ -21,8 +21,43 @@ function Main() {
     const onChangeContactMessage = (e) => {
         setContactMessage(e.target.value);
     }
-    const onSubmitContactForm = () => {
-        
+    const onSubmitContactForm = async (e) => {
+        try {
+            console.log({
+                "name": contactName,
+                "company": contactCompany,
+                "email": contactEmail,
+                "message": contactMessage
+            })
+            const response = await fetch("http://100.25.46.65:8010/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    "name": contactName,
+                    "company": contactCompany,
+                    "email": contactEmail,
+                    "message": contactMessage
+                })
+            })
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data);
+
+            setContactName("");
+            setContactEmail("");
+            setContactCompany("");
+            setContactMessage("");
+            
+
+        } catch (error) {
+            console.error("Error posting contact information", error);
+        }
     }
 
     return (
@@ -47,7 +82,6 @@ function Main() {
                     <p className='poppins-medium white'>Join Waitlist</p>
                 </div>
             </div>
-
             
             <div className={`main__waitlistBackground ${isWaitlist ? 'main__waitlistBackground--show' : 'main__waitlistBackground--hide'}`}>
                 <Waitlist setisWaitlist={x => setIsWaitlist(x)}/>
