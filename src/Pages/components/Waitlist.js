@@ -1,7 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import './Waitlist.css';
-import { loadPaymentWidget } from "@tosspayments/payment-widget-sdk"
-import { nanoid } from 'nanoid';
 
 function WaitlistMain({setisWaitlist, setPopupState}) {
     return (
@@ -34,7 +32,7 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                 </div>
                 <div className='waitlistMain__plan dark1_background'>
                     <p className='waitlistMain__planName suse-medium white'>Book ROUND</p>
-                    <p className='waitlistMain__planPrice poppins-semibold white'>$10</p>
+                    <p className='waitlistMain__planPrice poppins-semibold white'>$15</p>
                     <div className='waitlistMain__properties'>
                         <div className='waitlistMain__property'>
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
@@ -49,9 +47,9 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                             <p className='poppins-medium white'>Get followup news</p>
                         </div>
                     </div>
-                    <div onClick={() => setPopupState(2)} className='waitlistMain__planButton white_background'>
+                    <a className='waitlistMain__bookLink' href='https://www.buymeacoffee.com/round' target='_blank'><div className='waitlistMain__planButton white_background'>
                         <p className='dark1 poppins-semibold'>Start Booking</p>
-                    </div>
+                    </div></a>
                 </div>
             </div>
 
@@ -126,56 +124,6 @@ function WaitlistEmail({setPopupState}) {
     )
 }
 
-function WaitlistBook({setPopupState}) {
-    const paymentWidgetRef = useRef(null)
-    const clientKey = "test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm"
-    const customerKey = "L09yE0ynyzyo-Kv3ILcKc"
-    const price = 50000;
-    
-    useEffect(() => {
-        (async () => {
-            const paymentWidget = await loadPaymentWidget(clientKey, customerKey)
-        
-            paymentWidget.renderPaymentMethods(".waitlistBook__payment", {
-                value: price,
-                currency: "KRW",
-                country: "KR"
-            })
-            
-            paymentWidgetRef.current = paymentWidget
-        })()
-    }, [])
-
-    const onClickPay = async () => {
-        const paymentWidget = paymentWidgetRef.current
-
-        try {
-          await paymentWidget?.requestPayment({
-          	orderId: nanoid(),
-            orderName: "토스 티셔츠 외 2건",
-            customerName: "김토스",
-            customerEmail: "customer123@gmail.com",
-            successUrl: `${window.location.origin}/success`,
-            failUrl: `${window.location.origin}/fail`,
-        }) 
-        } catch (err) {
-          	console.log(err)
-        }
-    }
-
-    return (
-        <div className='waitlistBook white_background'>
-            <div className='waitlistBook__header dark1_background'>
-                <img onClick={() => setPopupState(0)} className='waitlistBook__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
-            </div>
-            <div className='waitlistBook__payment'/>
-            <div className='waitlistBook__payButton blue2_background' onClick={onClickPay}>
-                <p className='poppins-medium white'>PAY</p>
-            </div>
-        </div>
-    )
-}
-
 function Waitlist({setisWaitlist}) {
     const [popupState, setPopupState] = useState(0);
 
@@ -187,10 +135,6 @@ function Waitlist({setisWaitlist}) {
 
             <div className={`waitlist__email ${popupState === 1 ? 'waitlist__email--show' : 'waitlist__email--hide'}`}>
                 <WaitlistEmail setPopupState={x => setPopupState(x)} />
-            </div>
-
-            <div className={`waitlist__book ${popupState === 2 ? 'waitlist__book--show' : 'waitlist__book--hide'}`}>
-                <WaitlistBook setPopupState={x => setPopupState(x)} />
             </div>
         </div>
     )

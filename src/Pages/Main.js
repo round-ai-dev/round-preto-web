@@ -179,8 +179,8 @@ function Main() {
                     <p className='main__partnersTitle suse-bold'>Our Partners</p>
                     <div className='main__partnerLogos'>
                         <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/sim2real.svg'}/>
-                        <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/story.png'}/>
-                        <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/vessl.png'}/>
+                        {/* <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/story.png'}/>
+                        <img className='main__partnerLogo' alt='' src={process.env.PUBLIC_URL + '/partners/vessl.png'}/> */}
                     </div>
                 </div>
             </div>
