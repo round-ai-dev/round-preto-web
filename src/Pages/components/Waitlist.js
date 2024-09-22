@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './Waitlist.css';
-import { loadPaymentWidget, PaymentWidgetInstance } from "@tosspayments/payment-widget-sdk"
+import { loadPaymentWidget } from "@tosspayments/payment-widget-sdk"
+import { nanoid } from 'nanoid';
 
 function WaitlistMain({setisWaitlist, setPopupState}) {
     return (
@@ -71,7 +72,7 @@ function WaitlistEmail({setPopupState}) {
     }
     const onSubmitForm = async() => {
         try {
-            const response = await fetch("https://100.25.46.65:8010/waitlist", {
+            const response = await fetch("http://100.25.46.65:8010/waitlist", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -126,6 +127,7 @@ function WaitlistEmail({setPopupState}) {
 }
 
 function WaitlistBook({setPopupState}) {
+    const paymentWidgetRef = useRef(null)
     const clientKey = "test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm"
     const customerKey = "L09yE0ynyzyo-Kv3ILcKc"
     const price = 50000;
@@ -134,46 +136,41 @@ function WaitlistBook({setPopupState}) {
         (async () => {
             const paymentWidget = await loadPaymentWidget(clientKey, customerKey)
         
-            paymentWidget.renderPaymentMethods("#payment-widget", price)
-        
+            paymentWidget.renderPaymentMethods(".waitlistBook__payment", {
+                value: price,
+                currency: "KRW",
+                country: "KR"
+            })
+            
+            paymentWidgetRef.current = paymentWidget
         })()
     }, [])
+
+    const onClickPay = async () => {
+        const paymentWidget = paymentWidgetRef.current
+
+        try {
+          await paymentWidget?.requestPayment({
+          	orderId: nanoid(),
+            orderName: "토스 티셔츠 외 2건",
+            customerName: "김토스",
+            customerEmail: "customer123@gmail.com",
+            successUrl: `${window.location.origin}/success`,
+            failUrl: `${window.location.origin}/fail`,
+        }) 
+        } catch (err) {
+          	console.log(err)
+        }
+    }
 
     return (
         <div className='waitlistBook white_background'>
             <div className='waitlistBook__header dark1_background'>
                 <img onClick={() => setPopupState(0)} className='waitlistBook__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
             </div>
-            <div id="payment-widget" />
-        </div>
-    )
-}
-
-function WaitlistBetatest({setPopupState}) {
-    return (
-        <div className='waitlistBetatest white_background'>
-            <div className='waitlistBetatest__header dark1_background'>
-                <img onClick={() => setPopupState(0)} className='waitlistBetatest__exit' alt='' src={process.env.PUBLIC_URL + '/icons/exit_bright.svg'}/>
-            </div>
-
-            <div className='waitlistBetatest__starting'>
-                <p className='waitlistBetatest__title suse-semibold'>Leave E-mail</p>
-                <p className='waitlistBetatest__subtitle poppins-medium'>We will send you our beta version.</p>
-            </div>
-
-            <div className='waitlistBetatest__inputs'>
-                <div className='waitlistBetatest__input'>
-                    <p className='waitlistBetatest__inputName poppins-medium'>name:</p>
-                    <div className='waitlistBetatest__inputHolder dark1_background'><input className='white' type='text'/></div>
-                </div>
-                <div className='waitlistBetatest__input'>
-                    <p className='waitlistBetatest__inputName poppins-medium'>e-mail:</p>
-                    <div className='waitlistBetatest__inputHolder dark1_background'><input className='white' type='text'/></div>
-                </div>
-            </div>
-
-            <div className='waitlistBetatest__submitButton dark2_background'>
-                <p className='poppins-medium white'>Submit</p>
+            <div className='waitlistBook__payment'/>
+            <div className='waitlistBook__payButton blue2_background' onClick={onClickPay}>
+                <p className='poppins-medium white'>PAY</p>
             </div>
         </div>
     )
@@ -194,10 +191,6 @@ function Waitlist({setisWaitlist}) {
 
             <div className={`waitlist__book ${popupState === 2 ? 'waitlist__book--show' : 'waitlist__book--hide'}`}>
                 <WaitlistBook setPopupState={x => setPopupState(x)} />
-            </div>
-
-            <div className={`waitlist__betatest ${popupState === 3 ? 'waitlist__betatest--show' : 'waitlist__betatest--hide'}`}>
-                <WaitlistBetatest setPopupState={x => setPopupState(x)} />
             </div>
         </div>
     )

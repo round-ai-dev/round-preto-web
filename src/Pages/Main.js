@@ -23,6 +23,7 @@ function Main() {
     }
     const onSubmitContactForm = async (e) => {
         try {
+            e.preventDefault();
             console.log({
                 "name": contactName,
                 "company": contactCompany,

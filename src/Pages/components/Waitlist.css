@@ -211,18 +211,17 @@
 .waitlistBook { 
     /* width: 400px;
     height: 500px; */
+    width: 80vw;
+    max-width: 1000px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
     position: relative;
 }
 
 .waitlistBook__header {
-    position: absolute;
-    top: 0;
     height: 50px;
     width: 100%;
     border-radius: 20px 20px 0 0;
@@ -240,7 +239,40 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
+.waitlistBook__payment {
+    width: 100%;
+    overflow: auto;
+}
+
+.waitlistBook__payButton {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 20px;
+    transition: all 0.5s;
+}
+
+.waitlistBook__payButton > p {
+    transition: all 0.5s;
+}
+
+.waitlistBook__payButton:hover {
+    background-color: #BAD0E9;
+    cursor: pointer;
+}
+
+.waitlistBook__payButton:hover > p {
+    color: #2A64A9;
+}
+
+.waitlistBook__payment > .__tosspayments_payment_widget_iframe_wrapper__ > iframe > html > .prefers-reduced-motion > .__next > .pAlert {
+    display: none !important;
+}
+
+.pAlert {
+    display: none !important;
+}
+
+@media only screen and (max-width: 800px) {
     .waitlist__main--show, .waitlist__email--show, .waitlist__book--show, .waitlist__betatest--show {
         display: block;
     }
@@ -460,28 +492,27 @@
     }
     
     .waitlistBook { 
-        width: 300px;
-        height: 500px;
+        /* width: 400px;
+        height: 500px; */
+        width: 80vw;
+        max-width: 1000px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 50px;
         position: relative;
     }
     
     .waitlistBook__header {
-        position: absolute;
-        top: 0;
-        height: 40px;
+        height: 50px;
         width: 100%;
         border-radius: 20px 20px 0 0;
     }
     
     .waitlistBook__exit {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         position: absolute;
         top: 12px;
         right: 12px;
@@ -489,5 +520,30 @@
     
     .waitlistBook__exit:hover {
         cursor: pointer;
+    }
+    
+    .waitlistBook__payment {
+        width: 100%;
+        overflow: auto;
+    }
+    
+    .waitlistBook__payButton {
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin: 20px;
+        transition: all 0.5s;
+    }
+    
+    .waitlistBook__payButton > p {
+        transition: all 0.5s;
+    }
+    
+    .waitlistBook__payButton:hover {
+        background-color: #BAD0E9;
+        cursor: pointer;
+    }
+    
+    .waitlistBook__payButton:hover > p {
+        color: #2A64A9;
     }
 }
