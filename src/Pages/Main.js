@@ -73,11 +73,11 @@ function Main() {
             <div className='main__header white_background'>
                 <a className='main__logoLink' href='#starting'><img src={process.env.PUBLIC_URL + '/logo/logo.svg'} alt=''/></a>
                 <div className='main__menus'>
-                    <a href='#starting'><p className='main__menu poppins-medium'>HOME</p></a>
-                    <a href='#features'><p className='main__menu poppins-medium'>FEATURES</p></a>
-                    <a href='#product'><p className='main__menu poppins-medium'>PRODUCT</p></a>
+                    <a id='menu_starting' href='#starting'><p className='main__menu poppins-medium'>HOME</p></a>
+                    <a id='menu_features' href='#features'><p className='main__menu poppins-medium'>FEATURES</p></a>
+                    <a id='menu_product' href='#product'><p className='main__menu poppins-medium'>PRODUCT</p></a>
                     {/* <a href='#partners'><p className='main__menu poppins-medium'>PARTNERS</p></a> */}
-                    <a href='#contact'><div className='main__headerContact main__button blue2_background'>
+                    <a id='menu_contact' href='#contact'><div className='main__headerContact main__button blue2_background'>
                         <p className='main__menu poppins-medium white'>CONTACT</p>
                     </div></a>
                 </div>
