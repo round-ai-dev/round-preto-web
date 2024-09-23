@@ -96,6 +96,16 @@
     font-size: 20px;
 }
 
+.main__startingCode {
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.main__startingCode > code {
+    background-color: transparent;
+    padding: 5px !important;
+}
+
 .main__waitlistButton {
     padding: 20px 25px;
     display: flex;
@@ -469,6 +479,19 @@
         line-height: 20px;
         font-size: 15px;
     }
+
+    
+    .main__startingCode {
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+
+    .main__startingCode > code {
+        background-color: transparent;
+        padding: 5px !important;
+        font-size: 12px;
+    }
+
     
     .main__waitlistButton {
         padding: 15px 20px;

@@ -47,7 +47,7 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                             <p className='poppins-medium white'>Get followup news</p>
                         </div>
                     </div>
-                    <a className='waitlistMain__bookLink' href='https://www.buymeacoffee.com/round' target='_blank'><div className='waitlistMain__planButton white_background'>
+                    <a className='waitlistMain__bookLink' href='https://www.buymeacoffee.com/round' target='_blank' rel="noreferrer"><div className='waitlistMain__planButton white_background'>
                         <p className='dark1 poppins-semibold'>Start Booking</p>
                     </div></a>
                 </div>

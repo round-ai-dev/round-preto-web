@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Main.css'
 import Waitlist from './components/Waitlist';
+import hljs from 'highlight.js';
+// import './dracula.css'
+import "highlight.js/styles/github.css";
 
 function Main() {
     const [isWaitlist, setIsWaitlist] = useState(false);
@@ -8,6 +11,10 @@ function Main() {
     const [contactCompany, setContactCompany] = useState("");
     const [contactEmail, setContactEmail] = useState("");
     const [contactMessage, setContactMessage] = useState("");
+
+    useEffect(() => {
+        hljs.highlightAll();
+    }, []);
 
     const onChangeContactName = (e) => {
         setContactName(e.target.value);
@@ -69,7 +76,7 @@ function Main() {
                     <a href='#starting'><p className='main__menu poppins-medium'>HOME</p></a>
                     <a href='#features'><p className='main__menu poppins-medium'>FEATURES</p></a>
                     <a href='#product'><p className='main__menu poppins-medium'>PRODUCT</p></a>
-                    <a href='#partners'><p className='main__menu poppins-medium'>PARTNERS</p></a>
+                    {/* <a href='#partners'><p className='main__menu poppins-medium'>PARTNERS</p></a> */}
                     <a href='#contact'><div className='main__headerContact main__button blue2_background'>
                         <p className='main__menu poppins-medium white'>CONTACT</p>
                     </div></a>
@@ -77,8 +84,13 @@ function Main() {
             </div>
 
             <div className='main__starting' id='starting'>
-                <p className='main__startingSlogan suse-bold'>Visualize Your Data Workflows</p>
-                <p className='main__startingExplanation poppins-regular'>Reinvent your data journey with high flexibility,<br/>easy visualization, and a developer-friendly data preparation tool</p>
+                {/* <p className='main__startingSlogan suse-bold'>Visualize Your Data Workflows</p> */}
+                <p className='main__startingSlogan suse-bold'>Load any datasets within few seconds!</p>
+                {/* <p className='main__startingExplanation poppins-regular'>Reinvent your data journey with high flexibility,<br/>easy visualization, and a developer-friendly data preparation tool</p> */}
+                <pre className='main__startingCode dark4_background'>
+                    <code className='language-python'>from round_ai import prepare_dataloader</code>
+                    <code className='language-python'>dataloader = prepare_dataloader("username/key")</code>
+                </pre>
                 <div onClick={() => setIsWaitlist(true)} className='main__waitlistButton main__button blue2_background'>
                     <p className='poppins-medium white'>Join Waitlist</p>
                 </div>
