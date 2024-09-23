@@ -73,12 +73,12 @@ function Main() {
             <div className='main__header white_background'>
                 <a className='main__logoLink' href='#starting'><img src={process.env.PUBLIC_URL + '/logo/logo.svg'} alt=''/></a>
                 <div className='main__menus'>
-                    <a id='menu_starting' href='#starting'><p className='main__menu poppins-medium'>HOME</p></a>
-                    <a id='menu_features' href='#features'><p className='main__menu poppins-medium'>FEATURES</p></a>
-                    <a id='menu_product' href='#product'><p className='main__menu poppins-medium'>PRODUCT</p></a>
+                    <a id='menu_starting' href='#starting'><p id='menu_starting' className='main__menu poppins-medium'>HOME</p></a>
+                    <a id='menu_features' href='#features'><p id='menu_features' className='main__menu poppins-medium'>FEATURES</p></a>
+                    <a id='menu_product' href='#product'><p id='menu_product' className='main__menu poppins-medium'>PRODUCT</p></a>
                     {/* <a href='#partners'><p className='main__menu poppins-medium'>PARTNERS</p></a> */}
-                    <a id='menu_contact' href='#contact'><div className='main__headerContact main__button blue2_background'>
-                        <p className='main__menu poppins-medium white'>CONTACT</p>
+                    <a id='menu_contact' href='#contact'><div id='menu_contact' className='main__headerContact main__button blue2_background'>
+                        <p id='menu_contact' className='main__menu poppins-medium white'>CONTACT</p>
                     </div></a>
                 </div>
             </div>
