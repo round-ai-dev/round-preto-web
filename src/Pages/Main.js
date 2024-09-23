@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import './Main.css'
 import Waitlist from './components/Waitlist';
 import hljs from 'highlight.js';
-// import './dracula.css'
-import "highlight.js/styles/github.css";
+import './dracula.css'
+// import "highlight.js/styles/github.css";
 
 function Main() {
     const [isWaitlist, setIsWaitlist] = useState(false);
@@ -85,9 +85,9 @@ function Main() {
 
             <div className='main__starting' id='starting'>
                 <p className='main__startingSlogan suse-bold'>Load any datasets within few seconds!</p>
-                <pre className='main__startingCode dark4_background'>
+                <pre className='main__startingCode dark1_background'>
                     <code className='language-python'>from round_ai import prepare_dataloader</code>
-                    <code className='language-python'>dataloader = prepare_dataloader("username/key")</code>
+                    <code className='language-python'>dataloader = prepare_dataloader("allenai/objaverse-xl")</code>
                 </pre>
                 <div id='waitlist_button' onClick={() => setIsWaitlist(true)} className='main__waitlistButton main__button blue2_background'>
                     <p id='waitlist_button' className='poppins-medium white'>Join Waitlist</p>

@@ -71,7 +71,7 @@
     height: 200px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .waitlistMain__property {

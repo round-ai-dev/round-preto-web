@@ -103,7 +103,8 @@
 
 .main__startingCode > code {
     background-color: transparent;
-    padding: 5px !important;
+    padding: 10px !important;
+    font-size: 20px;
 }
 
 .main__waitlistButton {

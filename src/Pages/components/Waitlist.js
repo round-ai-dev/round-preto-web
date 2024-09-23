@@ -15,15 +15,15 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                     <div className='waitlistMain__properties'>
                         <div className='waitlistMain__property'>
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_dark.svg'}/>
-                            <p className='poppins-medium dark1'>Get followup news</p>
+                            <p className='poppins-medium dark1'>Get news for updates</p>
                         </div>
                         <div className='waitlistMain__property'>
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_dark.svg'}/>
-                            <p className='poppins-medium dark1'>Try out beta version</p>
+                            <p className='poppins-medium dark1'>Get access to beta</p>
                         </div>
                         <div className='waitlistMain__property'>
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_dark.svg'}/>
-                            <p className='poppins-medium dark1'>Get betatesting notifications</p>
+                            <p className='poppins-medium dark1'>Get notifications<br/>for open-source</p>
                         </div>
                     </div>
                     <div id='email_button' onClick={() => setPopupState(1)} className='waitlistMain__planButton dark1_background'>
@@ -36,16 +36,21 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                     <div className='waitlistMain__properties'>
                         <div className='waitlistMain__property'>
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
-                            <p className='poppins-medium white'>1 year use when released</p>
+                            <p className='poppins-medium dark3'>Get news for updates</p>
                         </div>
                         <div className='waitlistMain__property'>
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
-                            <p className='poppins-medium white'>80% discount</p>
+                            <p className='poppins-medium dark3'>Get access to beta</p>
                         </div>
                         <div className='waitlistMain__property'>
                             <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
-                            <p className='poppins-medium white'>Get followup news</p>
+                            <p className='poppins-medium dark3'>Get notifications<br/>for open-source</p>
                         </div>
+                        <div className='waitlistMain__property'>
+                            <img alt='' src={process.env.PUBLIC_URL + '/icons/check_ring_white.svg'}/>
+                            <p className='poppins-medium white'>80% discount on premium <br/> version for 1 year</p>
+                        </div>
+                        
                     </div>
                     <a id='book_button' className='waitlistMain__bookLink' href='https://www.buymeacoffee.com/round' target='_blank' rel="noreferrer"><div className='waitlistMain__planButton white_background'>
                         <p id='book_button' className='dark1 poppins-semibold'>Start Booking</p>
