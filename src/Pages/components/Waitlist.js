@@ -31,7 +31,7 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                     </div>
                 </div>
                 <div className='waitlistMain__plan dark1_background'>
-                    <p className='waitlistMain__planName suse-medium white'>Book ROUND</p>
+                    <p className='waitlistMain__planName suse-medium white'>Book ROUND Premium</p>
                     <p className='waitlistMain__planPrice poppins-semibold white'>$15</p>
                     <div className='waitlistMain__properties'>
                         <div className='waitlistMain__property'>
