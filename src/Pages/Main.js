@@ -90,7 +90,7 @@ function Main() {
                     <code className='language-python'>dataloader = prepare_dataloader("username/key")</code>
                 </pre>
                 <div id='waitlist_button' onClick={() => setIsWaitlist(true)} className='main__waitlistButton main__button blue2_background'>
-                    <p className='poppins-medium white'>Join Waitlist</p>
+                    <p id='waitlist_button' className='poppins-medium white'>Join Waitlist</p>
                 </div>
             </div>
             
