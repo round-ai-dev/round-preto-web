@@ -26,7 +26,7 @@ function WaitlistMain({setisWaitlist, setPopupState}) {
                             <p className='poppins-medium dark1'>Get betatesting notifications</p>
                         </div>
                     </div>
-                    <div id='emai_button' onClick={() => setPopupState(1)} className='waitlistMain__planButton dark1_background'>
+                    <div id='email_button' onClick={() => setPopupState(1)} className='waitlistMain__planButton dark1_background'>
                         <p className='white poppins-semibold'>Leave e-mail</p>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ function WaitlistEmail({setPopupState}) {
                 </div>
             </div>
 
-            <div className='waitlistEmail__submitButton dark2_background' onClick={onSubmitForm}>
+            <div id='emailSubmit_button' className='waitlistEmail__submitButton dark2_background' onClick={onSubmitForm}>
                 <p className='poppins-medium white'>Submit</p>
             </div>
         </div>
