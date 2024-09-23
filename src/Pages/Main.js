@@ -37,7 +37,7 @@ function Main() {
                 "email": contactEmail,
                 "message": contactMessage
             })
-            const response = await fetch("http://100.25.46.65:8010/contact", {
+            const response = await fetch("https://round-y.com/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

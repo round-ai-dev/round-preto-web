@@ -70,7 +70,7 @@ function WaitlistEmail({setPopupState}) {
     }
     const onSubmitForm = async() => {
         try {
-            const response = await fetch("http://100.25.46.65:8010/waitlist", {
+            const response = await fetch("https://round-y.com/api/waitlist", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
