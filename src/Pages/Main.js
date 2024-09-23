@@ -84,14 +84,12 @@ function Main() {
             </div>
 
             <div className='main__starting' id='starting'>
-                {/* <p className='main__startingSlogan suse-bold'>Visualize Your Data Workflows</p> */}
                 <p className='main__startingSlogan suse-bold'>Load any datasets within few seconds!</p>
-                {/* <p className='main__startingExplanation poppins-regular'>Reinvent your data journey with high flexibility,<br/>easy visualization, and a developer-friendly data preparation tool</p> */}
                 <pre className='main__startingCode dark4_background'>
                     <code className='language-python'>from round_ai import prepare_dataloader</code>
                     <code className='language-python'>dataloader = prepare_dataloader("username/key")</code>
                 </pre>
-                <div onClick={() => setIsWaitlist(true)} className='main__waitlistButton main__button blue2_background'>
+                <div id='waitlist_button' onClick={() => setIsWaitlist(true)} className='main__waitlistButton main__button blue2_background'>
                     <p className='poppins-medium white'>Join Waitlist</p>
                 </div>
             </div>
@@ -207,7 +205,7 @@ function Main() {
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Company / Position' value={contactCompany} onChange={onChangeContactCompany}/>
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Email Address' value={contactEmail} onChange={onChangeContactEmail}/>
                     <textarea className='main__contactMessage poppins-medium dark1_background white' type='textarea' placeholder='Message' value={contactMessage} onChange={onChangeContactMessage}/>
-                    <input className='main__contactSubmit main__button poppins-medium blue2_background white' type='submit' value='SUBMIT'/>
+                    <input id='contact_button' className='main__contactSubmit main__button poppins-medium blue2_background white' type='submit' value='SUBMIT'/>
                 </form>
             </div>
 
