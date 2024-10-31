@@ -84,7 +84,7 @@ function Main() {
             </div>
 
             <div className='main__starting' id='starting'>
-                <p className='main__startingSlogan suse-bold'>Load any datasets within few seconds!</p>
+                <p className='main__startingSlogan suse-bold'>Elevate Your Data Pipeline<br/>With Intelligent Automation</p>
                 <pre className='main__startingCode dark1_background'>
                     <code className='language-python'>from round_ai import prepare_dataloader</code>
                     <code className='language-python'>dataloader = prepare_dataloader("allenai/objaverse-xl")</code>
@@ -197,8 +197,8 @@ function Main() {
 
             <div className='main__contact' id='contact'>
                 <div className='main__contactHeader'>
-                    <p className='main__contactTitle suse-bold'>Contact Us!</p>
-                    <p className='main__contactSubtitle poppins-medium'>Leave a message for more details and pricing about ROUND!</p>
+                    <p className='main__contactTitle suse-bold'>Contact Us For Enterprise!</p>
+                    <p className='main__contactSubtitle poppins-medium'>Interested in ROUND Enterprise? Get in touch for detailed information and pricing!</p>
                 </div>
                 <form className='main__contactInputs' onSubmit={onSubmitContactForm}>
                     <input className='poppins-medium dark1_background white' type='text' placeholder='Name' value={contactName} onChange={onChangeContactName}/>
